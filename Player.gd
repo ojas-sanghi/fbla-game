@@ -59,7 +59,7 @@ func _physics_process(delta):
 	var new_anim = "idle"
 
 	if on_floor:
-		if anim == "fall":
+		if anim == "fall" and not Globals.in_water:
 			$AnimationPlayer.play("hit_ground")
 			yield($AnimationPlayer, "animation_finished")
 
