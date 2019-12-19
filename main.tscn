@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/tilesets/blue.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ParallaxBG.tscn" type="PackedScene" id=3]
 [ext_resource path="res://waterArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Box.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -30,3 +31,6 @@ position = Vector2( 587.836, 686.637 )
 [node name="Area2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2176.28, 852.118 )
 scale = Vector2( 38.5, 1.96 )
+
+[node name="Box" parent="." instance=ExtResource( 5 )]
+position = Vector2( 332.116, 904.393 )
