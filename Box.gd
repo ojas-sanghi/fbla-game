@@ -8,7 +8,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide(linear_vel)
 
 	linear_vel.y = GRAVITY_VEC.y
-	print(linear_vel.y)
 
 func _on_Area2DLeft_body_entered(body: PhysicsBody2D) -> void:
 	if not body:
@@ -24,7 +23,6 @@ func _on_Area2DRight_body_entered(body: PhysicsBody2D) -> void:
 
 func _on_Area2DRight_body_exited(body: PhysicsBody2D) -> void:
 	linear_vel.x = 0
-
 
 func _on_Area2DLeft_body_exited(body: PhysicsBody2D) -> void:
 	linear_vel.x = 0
