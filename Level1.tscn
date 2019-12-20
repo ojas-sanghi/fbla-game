@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/tilesets/blue.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://ParallaxBG.tscn" type="PackedScene" id=3]
-[ext_resource path="res://waterArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sceneElements/ParallaxBG.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sceneElements/waterArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/Box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,3 +35,6 @@ scale = Vector2( 38.5, 1.96 )
 
 [node name="Box" parent="." instance=ExtResource( 5 )]
 position = Vector2( 332.116, 904.393 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 844.106, 889.602 )
