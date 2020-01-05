@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const GRAVITY_VEC = Vector2(0,200)
+const GRAVITY_VEC = Vector2(0,500)
 
 var linear_vel = Vector2(0, 0)
 
