@@ -26,3 +26,4 @@ func _on_Area2DRight_body_exited(body: PhysicsBody2D) -> void:
 
 func _on_Area2DLeft_body_exited(body: PhysicsBody2D) -> void:
 	linear_vel.x = 0
+
