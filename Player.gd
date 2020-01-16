@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal player_died
+
 const GRAVITY_VEC = Vector2(0, 900)
 const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 25.0
@@ -55,6 +57,12 @@ func _physics_process(delta) -> void:
 	if on_floor: # reset the counter when they touch the floor
 		times_jumped = 0
 
+
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider is TileMap:
+			check_tilemap_collision(collision)
+
 	#### ANIMATION ####
 
 	var new_anim = "idle"
@@ -96,3 +104,10 @@ func _physics_process(delta) -> void:
 	if new_anim != anim:
 		anim = new_anim
 		$AnimationPlayer.play(anim)
+
+func check_tilemap_collision(collision):
+	var tile_pos = collision.collider.world_to_map(position)
+	tile_pos -= collision.normal # colliding tile
+	var tile = collision.collider.get_cellv(tile_pos)
+	if tile == 12: # we've hit a triangle
+		emit_signal("player_died")
