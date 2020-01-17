@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_stand.png" type="Texture" id=2]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=3]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=4]
@@ -141,7 +141,10 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 151.627, 229.773 )
 script = ExtResource( 1 )
+gravity = 2500.0
+gravity_limit = 750
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1, 0 )
@@ -165,3 +168,4 @@ current = true
 limit_left = 0
 limit_top = 0
 limit_bottom = 0
+limit_smoothed = true

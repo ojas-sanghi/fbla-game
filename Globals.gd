@@ -1,11 +1,12 @@
 extends Node
 
-var in_water: bool = false
+var in_water := false
 
-var powerups: Array = []
+var powerups := []
 
 func _ready() -> void:
 	powerups.append("double_jump")
+	return
 
 func add_powerup(powerup: String) -> void:
 	powerups.append(powerup)
