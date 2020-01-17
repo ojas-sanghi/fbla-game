@@ -1,18 +1,19 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_stand.png" type="Texture" id=2]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=3]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=4]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=5]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up1.png" type="Texture" id=6]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up2.png" type="Texture" id=7]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up3.png" type="Texture" id=8]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim1.png" type="Texture" id=9]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim2.png" type="Texture" id=10]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk1.png" type="Texture" id=11]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk2.png" type="Texture" id=12]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk3.png" type="Texture" id=13]
+[ext_resource path="res://assets/included/PNG/Players/Player Red/playerRed_stand.png" type="Texture" id=3]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=4]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=5]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=6]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up1.png" type="Texture" id=7]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up2.png" type="Texture" id=8]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up3.png" type="Texture" id=9]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim1.png" type="Texture" id=10]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim2.png" type="Texture" id=11]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk1.png" type="Texture" id=12]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk2.png" type="Texture" id=13]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk3.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "death"
@@ -27,7 +28,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 4 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:visible")
@@ -55,7 +56,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.024233 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ) ]
+"values": [ ExtResource( 5 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -71,7 +72,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.024233, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 6 ), ExtResource( 2 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -103,7 +104,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -120,7 +121,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ), ExtResource( 10 ) ]
+"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -137,7 +138,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ) ]
+"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ) ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -147,7 +148,21 @@ gravity = 2500.0
 gravity_limit = 750
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1, 0 )
+texture = ExtResource( 2 )
+region_rect = Rect2( -11, -3, 68, 60 )
+
+[node name="SpriteRed" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+region_rect = Rect2( -11, -3, 68, 60 )
+
+[node name="SpriteGreen" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+region_rect = Rect2( -11, -3, 68, 60 )
+
+[node name="SpriteYellow" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 2 )
 region_rect = Rect2( -11, -3, 68, 60 )
 
