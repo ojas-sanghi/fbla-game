@@ -1,3 +1,52 @@
+extends Actor
+
+var _times_jumped := 0
+
+func _physics_process(delta: float) -> void:
+	var is_jump_interrupted := Input.is_action_just_released("jump") and _velocity.y < 0.0
+	var direction = get_direction()
+	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
+	move_and_slide(_velocity, FLOOR_NORMAL)
+
+func get_direction() -> Vector2:
+	return Vector2(
+		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
+		-1.0 if can_jump() else 1.0
+	)
+
+func calculate_move_velocity(
+		linear_velocity: Vector2,
+		direction: Vector2,
+		speed: Vector2,
+		is_jump_interrupted: bool
+	) -> Vector2:
+	var new_vel := linear_velocity
+
+	new_vel.x = speed.x * direction.x
+
+	new_vel.y += gravity * get_physics_process_delta_time()
+	if new_vel.y > speed.y:
+		new_vel.y = speed.y
+
+	if direction.y == -1.0:
+		new_vel.y = speed.y * direction.y
+
+	if is_jump_interrupted:
+		new_vel.y = 0
+
+	return new_vel
+
+func can_jump():
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor():
+			_times_jumped = 1 # reset to 0, then increment 1
+			return true
+		if Globals.has_powerup("double_jump") and _times_jumped == 1: # if they have the powerup and they've only jumped once, let them jump again
+			_times_jumped += 1
+			return true
+	return false
+
+"""
 extends KinematicBody2D
 
 signal player_died
@@ -111,3 +160,4 @@ func check_tilemap_collision(collision):
 	var tile = collision.collider.get_cellv(tile_pos)
 	if tile == 12: # we've hit a triangle
 		emit_signal("player_died")
+"""
