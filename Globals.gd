@@ -1,6 +1,7 @@
 extends Node
 
-var in_water := false
+var sprite_colors := ["Blue", "Red", "Green", "Grey"]
+var current_sprite_color := "Red"
 
 var powerups := []
 

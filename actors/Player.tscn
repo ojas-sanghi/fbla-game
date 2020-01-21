@@ -1,25 +1,34 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_stand.png" type="Texture" id=2]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=2]
 [ext_resource path="res://assets/included/PNG/Players/Player Red/playerRed_stand.png" type="Texture" id=3]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=4]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=5]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=6]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up1.png" type="Texture" id=7]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up2.png" type="Texture" id=8]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up3.png" type="Texture" id=9]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim1.png" type="Texture" id=10]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim2.png" type="Texture" id=11]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk1.png" type="Texture" id=12]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk2.png" type="Texture" id=13]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk3.png" type="Texture" id=14]
+[ext_resource path="res://assets/included/PNG/Players/Player Green/playerGreen_stand.png" type="Texture" id=4]
+[ext_resource path="res://assets/included/PNG/Players/Player Grey/playerGrey_stand.png" type="Texture" id=5]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=6]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=7]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_stand.png" type="Texture" id=8]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up1.png" type="Texture" id=9]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up2.png" type="Texture" id=10]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up3.png" type="Texture" id=11]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim1.png" type="Texture" id=12]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_swim2.png" type="Texture" id=13]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk1.png" type="Texture" id=14]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk2.png" type="Texture" id=15]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_walk3.png" type="Texture" id=16]
 
-[sub_resource type="Animation" id=1]
-resource_name = "death"
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 18.8598
+height = 13.5722
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 17.9014
+height = 9.8775
+
+[sub_resource type="Animation" id=3]
 length = 1.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -28,10 +37,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ) ]
+"values": [ ExtResource( 6 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:visible")
+tracks/1/path = NodePath("SpriteBlue:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -43,11 +52,10 @@ tracks/1/keys = {
 "values": [ false, true, false, true ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "fall"
+[sub_resource type="Animation" id=4]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -56,30 +64,29 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.024233 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 7 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "hit_ground"
+[sub_resource type="Animation" id=6]
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.024233, 0.2 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 8 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=7]
 length = 0.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -88,14 +95,14 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ ExtResource( 8 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 length = 0.8
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -104,15 +111,14 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "swim"
+[sub_resource type="Animation" id=9]
 length = 0.6
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -121,15 +127,15 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 12 ), ExtResource( 13 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=10]
 length = 0.8
 loop = true
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("SpriteBlue:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -138,7 +144,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ) ]
+"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ) ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -147,36 +153,53 @@ script = ExtResource( 1 )
 gravity = 2500.0
 gravity_limit = 750
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="SpriteBlue" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 region_rect = Rect2( -11, -3, 68, 60 )
+
+[node name="CollisionBlue" type="CollisionPolygon2D" parent="."]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( 3.03237, -26.9861, -3.35342, -26.9861, -6.545, -23.9201, -22.0352, 1.83069, -21.8996, 7.96212, -20.3144, 10.9233, -17.0319, 13.2296, -7.29559, 13.256, -7.27111, 25.8466, -6.19535, 26.9223, -1.94748, 26.9775, -0.818991, 25.5901, -0.757492, 15.9973, -0.734044, 13.1255, -0.341913, 13.1255, -0.367856, 16.556, -0.343, 25.6057, 0.0776863, 26.6331, 0.919464, 26.9259, 4.12188, 26.9259, 5.43945, 26.9259, 6.10693, 25.5983, 6.19698, 13.2568, 16.5616, 13.1725, 19.6746, 11.6586, 21.9585, 8.4152, 21.998, 2.09537, 5.75873, -24.781 )
 
 [node name="SpriteRed" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
 region_rect = Rect2( -11, -3, 68, 60 )
 
+[node name="CollisionRed" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -16.6868, -24.1843, -19.3596, -21.5925, -19.1977, 10.7246, -16.2008, 14.2074, -7.12938, 14.2074, -7.13113, 23.911, -1.0795, 23.9416, -1.14063, 14.2834, -0.193146, 14.3139, -0.00976563, 23.8499, 6.01132, 23.9721, 6.04189, 14.1, 16.2915, 14.1917, 19.1478, 11.8882, 19.0665, -21.4681, 16.3127, -24.2219 )
+disabled = true
+
 [node name="SpriteGreen" type="Sprite" parent="."]
 visible = false
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 region_rect = Rect2( -11, -3, 68, 60 )
 
-[node name="SpriteYellow" type="Sprite" parent="."]
+[node name="CollisionGreen" type="CollisionShape2D" parent="."]
 visible = false
-texture = ExtResource( 2 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="SpriteGrey" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 5 )
 region_rect = Rect2( -11, -3, 68, 60 )
+
+[node name="CollisionGrey" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, -0.732727 )
+shape = SubResource( 2 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/death = SubResource( 1 )
-anims/fall = SubResource( 2 )
-anims/hit_ground = SubResource( 3 )
-anims/idle = SubResource( 4 )
-anims/jump = SubResource( 5 )
-anims/swim = SubResource( 6 )
-anims/walk = SubResource( 7 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 3.03237, -26.9861, -3.35342, -26.9861, -6.545, -23.9201, -22.0352, 1.83069, -21.8996, 7.96212, -20.3144, 10.9233, -17.0319, 13.2296, -7.29559, 13.256, -7.27111, 25.8466, -6.19535, 26.9223, -1.94748, 26.9775, -0.818991, 25.5901, -0.757492, 15.9973, -0.734044, 13.1255, -0.341913, 13.1255, -0.367856, 16.556, -0.343, 25.6057, 0.0776863, 26.6331, 0.919464, 26.9259, 4.12188, 26.9259, 5.43945, 26.9259, 6.10693, 25.5983, 6.19698, 13.2568, 16.5616, 13.1725, 19.6746, 11.6586, 21.9585, 8.4152, 21.998, 2.09537, 5.75873, -24.781 )
+anims/death = SubResource( 3 )
+anims/fall = SubResource( 4 )
+anims/hit_ground = SubResource( 6 )
+anims/idle = SubResource( 7 )
+anims/jump = SubResource( 8 )
+anims/swim = SubResource( 9 )
+anims/walk = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
