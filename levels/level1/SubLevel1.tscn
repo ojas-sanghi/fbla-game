@@ -1,3 +1,28 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/tilesets/red.tres" type="TileSet" id=2]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/parallaxBGs/ParallaxBGRed.tscn" type="PackedScene" id=4]
 
 [node name="SubLevel1" type="Node2D"]
+
+[node name="bgtiles" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 983040, 13, 0, 983041, 13, 0, 983042, 13, 0, 983043, 13, 0, 983044, 13, 0, 983045, 13, 0, 983046, 13, 0, 983047, 13, 0, 983048, 13, 0, 983049, 13, 0, 983050, 13, 0, 983051, 13, 0, 983052, 13, 0, 983053, 13, 0, 983054, 13, 0, 983055, 13, 0, 983056, 13, 0, 983057, 13, 0, 983058, 13, 0, 983059, 13, 0, 983060, 13, 0, 983061, 13, 0, 983062, 13, 0, 1048576, 13, 0, 1048577, 13, 0, 1048578, 13, 0, 1048579, 13, 0, 1048580, 13, 0, 1048581, 13, 0, 1048582, 13, 0, 1048583, 13, 0, 1048584, 13, 0, 1048585, 13, 0, 1048586, 13, 0, 1048587, 13, 0, 1048588, 13, 0, 1048589, 13, 0, 1048590, 13, 0, 1048591, 13, 0, 1048592, 13, 0, 1048593, 13, 0, 1048594, 13, 0, 1048595, 13, 0, 1048596, 13, 0, 1048597, 13, 0, 1048598, 13, 0 )
+
+[node name="TileMap" type="TileMap" parent="." groups=[
+"tilemap",
+]]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 851969, 4, 0, 851970, 4, 1, 851971, 4, 1, 851972, 4, 1, 851973, 4, 1, 851974, 4, 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 176.701, 709.353 )
+
+[node name="ParallaxBackgroundRed" parent="." instance=ExtResource( 4 )]
