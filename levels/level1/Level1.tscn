@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://assets/tilesets/signs.tres" type="TileSet" id=4]
 [ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=6]
-[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sceneElements/Portal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=9]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -40,8 +41,11 @@ position = Vector2( 358.108, 673.77 )
 [node name="EndFlag" parent="Flags" instance=ExtResource( 6 )]
 position = Vector2( 6170.89, 801.982 )
 
-[node name="Player" parent="." instance=ExtResource( 7 )]
+[node name="Portal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3796.84, 328.721 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 373.39, 613.372 )
 gravity_limit = 800
 
-[node name="ParallaxBG" parent="." instance=ExtResource( 8 )]
+[node name="ParallaxBG" parent="." instance=ExtResource( 9 )]

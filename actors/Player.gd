@@ -9,7 +9,6 @@ func _ready() -> void:
 	self.connect("player_died", self, "on_player_died");
 
 	var flags = get_tree().get_nodes_in_group("flags")
-	print(flags)
 	if flags:
 		flags[0].connect("level_passed", self, "on_level_passed")
 
