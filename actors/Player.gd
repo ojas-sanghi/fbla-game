@@ -8,6 +8,11 @@ signal player_died
 func _ready() -> void:
 	self.connect("player_died", self, "on_player_died");
 
+	var flags = get_tree().get_nodes_in_group("flags")
+	print(flags)
+	if flags:
+		flags[0].connect("level_passed", self, "on_level_passed")
+
 func _physics_process(delta: float) -> void:
 	# If we let go of the jump button mid-jump
 	var is_jump_interrupted := Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -124,6 +129,9 @@ func on_player_died():
 	$AnimationPlayer.play("death")
 	yield($AnimationPlayer, "animation_finished")
 	$AnimationPlayer.stop(true)
-	yield(get_tree().create_timer(1), "timeout")
-	
+	yield(get_tree().create_timer(0.25), "timeout")
+
 	get_tree().reload_current_scene()
+
+func on_level_passed():
+	print("yay")
