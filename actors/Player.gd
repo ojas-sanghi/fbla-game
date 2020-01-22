@@ -5,6 +5,9 @@ var _anim := ""
 
 signal player_died
 
+func _ready() -> void:
+	self.connect("player_died", self, "on_player_died");
+
 func _physics_process(delta: float) -> void:
 	# If we let go of the jump button mid-jump
 	var is_jump_interrupted := Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -114,3 +117,13 @@ func check_tilemap_collision(collision):
 	var tile = collision.collider.get_cellv(tile_pos) # get cell index
 	if tile == 12: # we've hit a triangle, hardcoded tile index
 		emit_signal("player_died")
+
+func on_player_died():
+	set_physics_process(false)
+
+	$AnimationPlayer.play("death")
+	yield($AnimationPlayer, "animation_finished")
+	$AnimationPlayer.stop(true)
+	yield(get_tree().create_timer(1), "timeout")
+	
+	get_tree().reload_current_scene()
