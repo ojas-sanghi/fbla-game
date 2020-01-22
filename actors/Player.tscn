@@ -141,7 +141,6 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 151.627, 229.773 )
 script = ExtResource( 1 )
 gravity = 2500.0
 gravity_limit = 750
