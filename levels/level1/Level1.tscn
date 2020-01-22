@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levels/level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/tilesets/blue.tres" type="TileSet" id=3]
-[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=5]
-[ext_resource path="res://sceneElements/Box.tscn" type="PackedScene" id=6]
-[ext_resource path="res://actors/Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/tilesets/signs.tres" type="TileSet" id=4]
+[ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=6]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -26,14 +27,21 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
+[node name="Signs" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+tile_data = PoolIntArray( 393277, 0, 65539, 393291, 0, 0, 458806, 0, 3, 589852, 0, 0, 589867, 0, 3, 589891, 0, 3, 589910, 0, 0, 655373, 0, 0 )
+
+[node name="Flags" type="Node2D" parent="."]
+
+[node name="StartFlag" parent="Flags" instance=ExtResource( 5 )]
+position = Vector2( 358.108, 673.77 )
+
+[node name="EndFlag" parent="Flags" instance=ExtResource( 6 )]
+position = Vector2( 6170.89, 801.982 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 373.39, 613.372 )
 gravity_limit = 800
 
-[node name="ParallaxBG" parent="." instance=ExtResource( 5 )]
-
-[node name="Box" parent="." instance=ExtResource( 6 )]
-position = Vector2( 146.891, 520.356 )
-
-[node name="Enemy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 904.409, 657.281 )
+[node name="ParallaxBG" parent="." instance=ExtResource( 8 )]
