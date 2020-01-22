@@ -10,31 +10,31 @@ transform = Transform2D( 2, 0, 0, 2, 0, 0 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.1, 1 )
-motion_mirroring = Vector2( 1280, 0 )
+motion_mirroring = Vector2( 960, 1 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer"]
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 1280, 540 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.4, 1 )
-motion_mirroring = Vector2( 1280, 0 )
+motion_mirroring = Vector2( 960, 1 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer2"]
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 1280, 540 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.8, 1 )
-motion_mirroring = Vector2( 1280, 0 )
+motion_mirroring = Vector2( 960, 540 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer3"]
 position = Vector2( 0, -21.6553 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 1280, 540 )
+region_rect = Rect2( 0, 0, 1920, 1080 )

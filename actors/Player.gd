@@ -54,8 +54,6 @@ func calculate_move_velocity(
 	if is_jump_interrupted:
 		new_vel.y = 0
 
-	print(new_vel.y)
-
 	return new_vel
 
 func can_jump():
