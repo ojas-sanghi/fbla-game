@@ -15,4 +15,11 @@ func teleport():
 func _on_RedPortal_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":
 		if Globals.has_powerup("double_jump"):
+			set_physics_process(false)
+			
+			var player = get_tree().get_nodes_in_group("player")
+			if player:
+				player[0].set_physics_process(false)
+				player[0].get_node("AnimationPlayer").stop(false)
+			
 			teleport()

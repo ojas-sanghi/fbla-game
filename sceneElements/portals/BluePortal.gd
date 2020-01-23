@@ -16,4 +16,10 @@ func _on_BluePortal_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":
 		Globals.respawn_position = body.position
 		Globals.respawn_position.x += 50 # to prevent them from immediately going back into the portal upon coming back
+		
+		var player = get_tree().get_nodes_in_group("player")
+		if player:
+			player[0].set_physics_process(false)
+			player[0].get_node("AnimationPlayer").stop(false)
+		
 		teleport()
