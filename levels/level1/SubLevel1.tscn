@@ -38,13 +38,13 @@ tile_data = PoolIntArray( 458756, 0, 3, 655370, 0, 2, 983055, 0, 2, 1245205, 0, 
 position = Vector2( 1784.71, 1108.19 )
 
 [node name="RedPortal" parent="." instance=ExtResource( 7 )]
-position = Vector2( 630.219, 143.625 )
+position = Vector2( 631.766, 159.874 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="RedPortal2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 95.3598, 1871.47 )
+position = Vector2( 92.2647, 1885.4 )
 scale = Vector2( 0.3, 0.3 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 171.355, 1952.71 )
+position = Vector2( 175.336, 2001.06 )
 gravity_limit = 800
