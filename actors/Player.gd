@@ -13,6 +13,7 @@ func _ready() -> void:
 		flags[0].connect("level_passed", self, "on_level_passed")
 
 func _physics_process(delta: float) -> void:
+	print(position)
 	# If we let go of the jump button mid-jump
 	var is_jump_interrupted := Input.is_action_just_released("jump") and _velocity.y < 0.0
 
@@ -123,6 +124,10 @@ func check_tilemap_collision(collision):
 		emit_signal("player_died")
 
 func on_player_died():
+	
+	Globals.player_died = true
+	Globals.remove_powerups_gained_this_level()
+	
 	set_physics_process(false)
 
 	$AnimationPlayer.play("death")
@@ -133,4 +138,5 @@ func on_player_died():
 	get_tree().reload_current_scene()
 
 func on_level_passed():
+	Globals.add_powerups_gained_this_level()
 	print("yay")

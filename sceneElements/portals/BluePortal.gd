@@ -14,8 +14,7 @@ func teleport():
 
 func _on_BluePortal_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":
-		Globals.respawn_position = body.position
-		Globals.respawn_position.x += 50 # to prevent them from immediately going back into the portal upon coming back
+		Globals.respawn_position = Vector2(3900, 420)
 		
 		var player = get_tree().get_nodes_in_group("player")
 		if player:
