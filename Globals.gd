@@ -1,5 +1,6 @@
 extends Node
 
+var respawn_position := Vector2()
 var in_water := false
 
 var powerups := []

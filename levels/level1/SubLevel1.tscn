@@ -39,12 +39,12 @@ position = Vector2( 1784.71, 1108.19 )
 
 [node name="RedPortal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 630.219, 143.625 )
-scale = Vector2( 0.35, 0.35 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="RedPortal2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 95.3598, 1871.47 )
-scale = Vector2( 0.35, 0.35 )
+scale = Vector2( 0.3, 0.3 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 219.066, 1943.12 )
+position = Vector2( 171.355, 1952.71 )
 gravity_limit = 800

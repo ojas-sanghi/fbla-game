@@ -39,4 +39,4 @@ shape = SubResource( 1 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "portal"
 anims/portal = SubResource( 2 )
-[connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_BluePortal_body_entered"]
