@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/tilesets/signs.tres" type="TileSet" id=4]
 [ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=5]
 [ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sceneElements/Portal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sceneElements/portals/BluePortal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=9]
 
@@ -41,8 +41,9 @@ position = Vector2( 358.108, 673.77 )
 [node name="EndFlag" parent="Flags" instance=ExtResource( 6 )]
 position = Vector2( 6170.89, 801.982 )
 
-[node name="Portal" parent="." instance=ExtResource( 7 )]
+[node name="BluePortal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3796.84, 328.721 )
+scale = Vector2( 0.35, 0.35 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 373.39, 613.372 )
