@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_stand.png" type="Texture" id=2]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=3]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=4]
-[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=5]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_dead.png" type="Texture" id=2]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_fall.png" type="Texture" id=3]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_hit.png" type="Texture" id=4]
+[ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_stand.png" type="Texture" id=5]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up1.png" type="Texture" id=6]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up2.png" type="Texture" id=7]
 [ext_resource path="res://assets/included/PNG/Players/Player Blue/playerBlue_up3.png" type="Texture" id=8]
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:visible")
@@ -55,7 +55,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.024233 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -71,7 +71,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.024233, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 4 ), ExtResource( 5 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -87,7 +87,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ ExtResource( 5 ) ]
 }
 
 [sub_resource type="Animation" id=5]
