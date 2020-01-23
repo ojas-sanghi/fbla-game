@@ -31,7 +31,7 @@ __meta__ = {
 [node name="Signs" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
 format = 1
-tile_data = PoolIntArray( 393277, 0, 65539, 393291, 0, 0, 458806, 0, 3, 589852, 0, 0, 589867, 0, 3, 589891, 0, 3, 589910, 0, 0, 655373, 0, 0 )
+tile_data = PoolIntArray( 393291, 0, 0, 589852, 0, 0, 589867, 0, 3, 655373, 0, 0 )
 
 [node name="Flags" type="Node2D" parent="."]
 

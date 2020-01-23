@@ -30,7 +30,7 @@ __meta__ = {
 [node name="Signs" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
 format = 1
-tile_data = PoolIntArray( 458756, 0, 3, 655370, 0, 2, 983055, 0, 2, 1245205, 0, 2, 1310728, 0, 0, 1376272, 0, 3, 1703942, 0, 3 )
+tile_data = PoolIntArray( 1703942, 0, 3 )
 
 [node name="ParallaxBGRed" parent="." instance=ExtResource( 5 )]
 
