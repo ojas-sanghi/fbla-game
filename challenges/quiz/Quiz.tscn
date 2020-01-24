@@ -1,10 +1,45 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/parallaxBGs/ParallaxBGRed.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/tilesets/red.tres" type="TileSet" id=3]
+[ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=5]
 
 [node name="Control" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1921.0
-margin_bottom = 1087.0
-color = Color( 0.337255, 0.262745, 0.482353, 1 )
+[node name="ParallaxBackgroundRed" parent="." instance=ExtResource( 1 )]
+
+[node name="BG" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 1048576, 13, 0, 1048577, 13, 0, 1048578, 13, 0, 1048579, 13, 0, 1048580, 13, 0, 1048581, 13, 0, 1048582, 13, 0, 1048583, 13, 0, 1048584, 13, 0, 1048585, 13, 0, 1048586, 13, 0, 1048587, 13, 0, 1048588, 13, 0, 1048589, 13, 0, 1048590, 13, 0, 1048591, 13, 0, 1048592, 13, 0, 1048593, 13, 0, 1048594, 13, 0, 1048595, 13, 0, 1048596, 13, 0, 1048597, 13, 0, 1048598, 13, 0, 1048599, 13, 0, 1048600, 13, 0, 1048601, 13, 0, 1048602, 13, 0, 1048603, 13, 0, 1048604, 13, 0, 1048605, 13, 0 )
+
+[node name="Red" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 786434, 15, 0, 786435, 15, 1, 786436, 15, 1, 786437, 15, 2, 786441, 15, 0, 786442, 15, 1, 786443, 15, 1, 786444, 15, 2, 786448, 15, 0, 786449, 15, 1, 786450, 15, 1, 786451, 15, 2, 786455, 15, 0, 786456, 15, 1, 786457, 15, 1, 786458, 15, 2, 983040, 3, 0, 983041, 3, 1, 983042, 3, 1, 983043, 3, 1, 983044, 3, 1, 983045, 3, 1, 983046, 3, 1, 983047, 3, 1, 983048, 3, 1, 983049, 3, 1, 983050, 3, 1, 983051, 3, 1, 983052, 3, 1, 983053, 3, 1, 983054, 3, 1, 983055, 3, 1, 983056, 3, 1, 983057, 3, 1, 983058, 3, 1, 983059, 3, 1, 983060, 3, 1, 983061, 3, 1, 983062, 3, 1, 983063, 3, 1, 983064, 3, 1, 983065, 3, 1, 983066, 3, 1, 983067, 3, 1, 983068, 3, 1, 983069, 3, 2 )
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="RedPortal" parent="Portals" instance=ExtResource( 4 )]
+position = Vector2( 229.649, 622.682 )
+scale = Vector2( 0.328372, 0.328372 )
+
+[node name="RedPortal2" parent="Portals" instance=ExtResource( 4 )]
+position = Vector2( 692.134, 670.407 )
+scale = Vector2( 0.328372, 0.328372 )
+
+[node name="RedPortal3" parent="Portals" instance=ExtResource( 4 )]
+position = Vector2( 1148.81, 593.169 )
+scale = Vector2( 0.328372, 0.328372 )
+scene_path = ""
+
+[node name="RedPortal4" parent="Portals" instance=ExtResource( 4 )]
+position = Vector2( 1598.96, 656.55 )
+scale = Vector2( 0.328372, 0.328372 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 108.059, 905.977 )
