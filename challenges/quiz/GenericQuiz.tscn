@@ -6,7 +6,7 @@
 [ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=5]
 
-[node name="Control" type="Control"]
+[node name="GenericQuiz" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -25,20 +25,20 @@ tile_data = PoolIntArray( 786434, 15, 0, 786435, 15, 1, 786436, 15, 1, 786437, 1
 [node name="Portals" type="Node2D" parent="."]
 
 [node name="RedPortal" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( 229.649, 622.682 )
+position = Vector2( 235.349, 664 )
 scale = Vector2( 0.328372, 0.328372 )
 
 [node name="RedPortal2" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( 692.134, 670.407 )
+position = Vector2( 692.134, 664 )
 scale = Vector2( 0.328372, 0.328372 )
 
 [node name="RedPortal3" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( 1148.81, 593.169 )
+position = Vector2( 1148.81, 664 )
 scale = Vector2( 0.328372, 0.328372 )
 scene_path = ""
 
 [node name="RedPortal4" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( 1598.96, 656.55 )
+position = Vector2( 1598.96, 664 )
 scale = Vector2( 0.328372, 0.328372 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
