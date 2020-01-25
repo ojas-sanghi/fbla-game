@@ -1,14 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=2]
 [ext_resource path="res://assets/tilesets/blue.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/tilesets/signs.tres" type="TileSet" id=4]
-[ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=5]
-[ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sceneElements/portals/BluePortal.tscn" type="PackedScene" id=7]
-[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sceneElements/spikes/Spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sceneElements/portals/BluePortal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=10]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,21 +34,102 @@ tile_set = ExtResource( 4 )
 format = 1
 tile_data = PoolIntArray( 393291, 0, 0, 589852, 0, 0, 589867, 0, 3, 655373, 0, 0 )
 
+[node name="Spikes" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="FirstGap" type="Node2D" parent="Spikes"]
+editor/display_folded = true
+
+[node name="Spikes" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3040.34, 817.19 )
+
+[node name="Spikes2" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3104.34, 817.19 )
+
+[node name="Spikes3" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3169.34, 817.19 )
+
+[node name="Spikes4" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3233.34, 817.19 )
+
+[node name="Spikes5" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3297.34, 817.19 )
+
+[node name="Spikes6" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3360.52, 817.19 )
+
+[node name="Spikes7" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3422.52, 817.19 )
+
+[node name="Spikes8" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3485.52, 817.19 )
+
+[node name="Spikes9" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3548.52, 817.19 )
+
+[node name="Spikes10" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3611.52, 817.19 )
+
+[node name="Spikes11" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3674.52, 817.19 )
+
+[node name="Spikes12" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3739.52, 817.19 )
+
+[node name="Spikes13" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3802.52, 817.19 )
+
+[node name="Spikes14" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3865.52, 817.19 )
+
+[node name="Spikes15" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3928.52, 817.19 )
+
+[node name="Spikes16" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 3992.52, 817.19 )
+
+[node name="Spikes17" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
+position = Vector2( 4056.52, 817.19 )
+
+[node name="SecondGap" type="Node2D" parent="Spikes"]
+editor/display_folded = true
+
+[node name="Spikes22" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 4896.61, 818.988 )
+
+[node name="Spikes20" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 4960.61, 818.988 )
+
+[node name="Spikes21" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5025.61, 818.988 )
+
+[node name="Spikes23" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5089.61, 818.988 )
+
+[node name="Spikes18" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5153.61, 818.988 )
+
+[node name="Spikes19" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5216.79, 818.988 )
+
+[node name="Spikes31" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5278.79, 818.988 )
+
 [node name="Flags" type="Node2D" parent="."]
 
-[node name="StartFlag" parent="Flags" instance=ExtResource( 5 )]
+[node name="StartFlag" parent="Flags" instance=ExtResource( 6 )]
 position = Vector2( 358.108, 673.77 )
 
-[node name="EndFlag" parent="Flags" instance=ExtResource( 6 )]
+[node name="EndFlag" parent="Flags" instance=ExtResource( 7 )]
 position = Vector2( 6170.89, 801.982 )
 
-[node name="BluePortal" parent="." instance=ExtResource( 7 )]
+[node name="BluePortal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 3796.84, 328.721 )
 scale = Vector2( 0.35, 0.35 )
 scene_path = "res://levels/level1/SubLevel1.tscn"
 
-[node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 373.39, 613.372 )
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2968, 605.558 )
 gravity_limit = 800
 
-[node name="ParallaxBG" parent="." instance=ExtResource( 9 )]
+[node name="ParallaxBG" parent="." instance=ExtResource( 10 )]

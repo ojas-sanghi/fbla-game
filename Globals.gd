@@ -9,7 +9,7 @@ var powerups_gained_this_level := []
 
 func _ready() -> void:
 #	powerups.append("double_jump")
-	
+
 #	var player = get_tree().get_nodes_in_group("player")
 #	if player:
 #		player[0].connect("player_died", self, "on_player_died")
