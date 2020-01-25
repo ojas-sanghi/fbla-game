@@ -6,11 +6,13 @@ var _anim := ""
 signal player_died
 
 func _ready() -> void:
-	self.connect("player_died", self, "on_player_died");
-
 	var flags = get_tree().get_nodes_in_group("flags")
 	if flags:
 		flags[0].connect("level_passed", self, "on_level_passed")
+
+	var spikes = get_tree().get_nodes_in_group("spikes")
+	if spikes:
+		spikes[0].connect("player_died", self, "on_player_died")
 
 func _physics_process(delta: float) -> void:
 	# If we let go of the jump button mid-jump
@@ -22,11 +24,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide(_velocity, FLOOR_NORMAL)
 	animate_player(_velocity)
 
-	# Checks to see if we hit a triangle (death tile)
-	for i in get_slide_count():
-		var collision := get_slide_collision(i)
-		if collision.collider is TileMap:
-			check_tilemap_collision(collision)
+#	# Checks to see if we hit a triangle (death tile)
+#	for i in get_slide_count():
+#		var collision := get_slide_collision(i)
+#		if collision.collider is TileMap:
+#			check_tilemap_collision(collision)
 
 func get_direction() -> Vector2:
 	# Returns how fast we should go in either direction
@@ -115,18 +117,18 @@ func animate_player(
 		_anim = new_anim
 		$AnimationPlayer.play(_anim)
 
-func check_tilemap_collision(collision):
-	var tile_pos = collision.collider.world_to_map(position)
-	tile_pos -= collision.normal # colliding tile
-	var tile = collision.collider.get_cellv(tile_pos) # get cell index
-	if tile == 12: # we've hit a triangle, hardcoded tile index
-		emit_signal("player_died")
+#func check_tilemap_collision(collision):
+#	var tile_pos = collision.collider.world_to_map(position)
+#	tile_pos -= collision.normal # colliding tile
+#	var tile = collision.collider.get_cellv(tile_pos) # get cell index
+#	if tile == 12: # we've hit a triangle, hardcoded tile index
+#		emit_signal("player_died")
 
 func on_player_died():
-	
+
 	Globals.player_died = true
 	Globals.remove_powerups_gained_this_level()
-	
+
 	set_physics_process(false)
 
 	$AnimationPlayer.play("death")
