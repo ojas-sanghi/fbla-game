@@ -4,6 +4,7 @@ onready var anim_player := $AnimationPlayer
 
 export var scene_path : String
 export var ensure_double_jump : bool = true
+export var enable_teleport : bool = true
 
 func _ready() -> void:
 	anim_player.play("start")
@@ -11,6 +12,9 @@ func _ready() -> void:
 	anim_player.play("portal")
 
 func teleport():
+	
+	if not enable_teleport:
+		return
 
 	Globals.red_respawn_position = Vector2(950, 992)
 
