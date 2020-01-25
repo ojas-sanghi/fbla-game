@@ -260,17 +260,18 @@ position = Vector2( 4644.84, 2097.09 )
 [node name="Spikes27" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 3235.38, 2097.11 )
 
-[node name="RedPortal" parent="." instance=ExtResource( 8 )]
+[node name="ExitPortal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 631.766, 159.874 )
 scale = Vector2( 0.3, 0.3 )
 scene_path = "res://levels/level1/Level1.tscn"
 
-[node name="RedPortal2" parent="." instance=ExtResource( 8 )]
+[node name="EnterPortal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 92.2647, 1885.4 )
 scale = Vector2( 0.3, 0.3 )
 scene_path = "res://levels/level1/Level1.tscn"
+enable_teleport = false
 
-[node name="RedPortal3" parent="." instance=ExtResource( 8 )]
+[node name="QuizPortal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1082.7, 923.592 )
 scale = Vector2( 0.3, 0.3 )
 scene_path = "res://challenges/quiz/Quiz1.tscn"
