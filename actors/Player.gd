@@ -3,17 +3,6 @@ extends Actor
 var _times_jumped := 0
 var _anim := ""
 
-signal player_died
-
-func _ready() -> void:
-	var flags = get_tree().get_nodes_in_group("flags")
-	if flags:
-		flags[0].connect("level_passed", self, "on_level_passed")
-
-	var spikes = get_tree().get_nodes_in_group("spikes")
-	for s in spikes:
-		s.connect("player_died", self, "on_player_died")
-
 func _physics_process(delta: float) -> void:
 	# If we let go of the jump button mid-jump
 	var is_jump_interrupted := Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -111,7 +100,7 @@ func animate_player(
 		_anim = new_anim
 		$AnimationPlayer.play(_anim)
 
-func on_player_died():
+func kill_player():
 
 	Globals.player_died = true
 	Globals.remove_powerups_gained_this_level()
@@ -124,7 +113,3 @@ func on_player_died():
 	yield(get_tree().create_timer(0.25), "timeout")
 
 	get_tree().reload_current_scene()
-
-func on_level_passed():
-	Globals.add_powerups_gained_this_level()
-	print("yay")
