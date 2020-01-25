@@ -35,6 +35,7 @@ format = 1
 tile_data = PoolIntArray( 393291, 0, 0, 589852, 0, 0, 589867, 0, 3, 655373, 0, 0 )
 
 [node name="Spikes" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="FirstGap" type="Node2D" parent="Spikes"]
 editor/display_folded = true
@@ -89,6 +90,30 @@ position = Vector2( 3992.52, 817.19 )
 
 [node name="Spikes17" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
 position = Vector2( 4056.52, 817.19 )
+
+[node name="SecondGap" type="Node2D" parent="Spikes"]
+editor/display_folded = true
+
+[node name="Spikes22" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 4896.61, 818.988 )
+
+[node name="Spikes20" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 4960.61, 818.988 )
+
+[node name="Spikes21" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5025.61, 818.988 )
+
+[node name="Spikes23" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5089.61, 818.988 )
+
+[node name="Spikes18" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5153.61, 818.988 )
+
+[node name="Spikes19" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5216.79, 818.988 )
+
+[node name="Spikes31" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
+position = Vector2( 5278.79, 818.988 )
 
 [node name="Flags" type="Node2D" parent="."]
 

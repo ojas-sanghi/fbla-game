@@ -5,7 +5,7 @@ export(String, "Low", "High") var spikes_type = "High"
 signal player_died
 
 func _ready() -> void:
-	var spikes_string = "res://assets/included/PNG/Other/spikes" + spikes_type + "png"
+	var spikes_string = "res://assets/included/PNG/Other/spikes" + spikes_type + ".png"
 	$Sprite.texture = load(spikes_string)
 
 	if spikes_string == "Low":
