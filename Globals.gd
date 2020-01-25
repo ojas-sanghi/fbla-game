@@ -1,6 +1,8 @@
 extends Node
 
-var respawn_position := Vector2()
+var blue_respawn_position := Vector2()
+var red_respawn_position := Vector2()
+
 var in_water := false
 var player_died := false
 

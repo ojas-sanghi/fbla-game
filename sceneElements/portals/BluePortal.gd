@@ -16,7 +16,7 @@ func teleport():
 
 func _on_BluePortal_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":
-		Globals.respawn_position = Vector2(3900, 420)
+		Globals.blue_respawn_position = Vector2(3900, 420)
 
 		var player = get_tree().get_nodes_in_group("player")
 		if player:
