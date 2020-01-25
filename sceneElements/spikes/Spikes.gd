@@ -2,8 +2,6 @@ extends Area2D
 
 export(String, "Low", "High") var spikes_type = "High"
 
-signal player_died
-
 func _ready() -> void:
 	var spikes_string = "res://assets/included/PNG/Other/spikes" + spikes_type + ".png"
 	$Sprite.texture = load(spikes_string)
@@ -15,4 +13,4 @@ func _ready() -> void:
 
 func _on_Spikes_body_entered(body: PhysicsBody2D) -> void:
 	if body.name == "Player":
-		emit_signal("player_died")
+		body.kill_player()
