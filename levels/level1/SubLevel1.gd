@@ -12,6 +12,6 @@ func _ready():
 	if player:
 		if Globals.red_respawn_position != Vector2():
 			player[0].position = Globals.red_respawn_position
-	
+
 	if Globals.has_powerup("double_jump"):
 		$QuizPortal.queue_free()
