@@ -12,7 +12,7 @@ func _ready() -> void:
 	anim_player.play("portal")
 
 func teleport():
-	
+
 	if not enable_teleport:
 		return
 
