@@ -59,7 +59,7 @@ text = "Go through the portal to return to the game!"
 autowrap = true
 
 [node name="RedPortal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1614.49, 842.221 )
+position = Vector2( 1614.49, 858.221 )
 scale = Vector2( 0.328372, 0.328372 )
 scene_path = "res://levels/level1/SubLevel1.tscn"
 
