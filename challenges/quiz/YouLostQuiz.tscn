@@ -53,7 +53,7 @@ text = "Go through the portal to return to Round 1!"
 autowrap = true
 
 [node name="RedPortal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1614.49, 841.221 )
+position = Vector2( 1614.49, 858.221 )
 scale = Vector2( 0.328372, 0.328372 )
 scene_path = "res://challenges/quiz/Quiz1.tscn"
 ensure_double_jump = false
