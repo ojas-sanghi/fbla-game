@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=7]
 [ext_resource path="res://sceneElements/portals/BluePortal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/GUI/labels/LabelMid.tscn" type="PackedScene" id=10]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
@@ -128,8 +129,34 @@ position = Vector2( 3796.84, 328.721 )
 scale = Vector2( 0.35, 0.35 )
 scene_path = "res://levels/level1/SubLevel1.tscn"
 
-[node name="Player" parent="." instance=ExtResource( 9 )]
+[node name="ParallaxBG" parent="." instance=ExtResource( 9 )]
+
+[node name="Instructions" type="Node2D" parent="."]
+
+[node name="Move" parent="Instructions" instance=ExtResource( 10 )]
+margin_left = 263.855
+margin_top = 495.288
+margin_right = 573.855
+margin_bottom = 573.288
+text = "Use WASD or the arrow keys to move"
+autowrap = true
+
+[node name="Jump" parent="Instructions" instance=ExtResource( 10 )]
+margin_left = 873.936
+margin_top = 404.532
+margin_right = 1183.94
+margin_bottom = 482.532
+text = "Use Space, the Up arrow key, or W to jump!"
+autowrap = true
+
+[node name="Die" parent="Instructions" instance=ExtResource( 10 )]
+margin_left = 3073.34
+margin_top = 698.956
+margin_right = 3380.34
+margin_bottom = 771.956
+text = "If you hit the spikes, you'll die!"
+autowrap = true
+
+[node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 374, 677 )
 gravity_limit = 800
-
-[node name="ParallaxBG" parent="." instance=ExtResource( 10 )]
