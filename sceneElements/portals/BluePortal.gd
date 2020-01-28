@@ -8,7 +8,7 @@ func _ready() -> void:
 	# Hide the black rectange (later used in fade anim) and make it transparent
 	anim_player.play("start")
 	yield(anim_player, "animation_finished")
-	
+
 	# Play the "idle" portal animation; the 2 frames
 	anim_player.play("portal")
 
@@ -16,7 +16,7 @@ func teleport():
 	# Play the fade in animation and wait till it finishes
 	anim_player.play("fade_in")
 	yield(anim_player, "animation_finished")
-	
+
 	# Load the path set by us when making the scene
 	get_tree().change_scene_to(load(scene_path))
 
