@@ -9,6 +9,9 @@
 [node name="GenericQuiz" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ParallaxBackgroundRed" parent="." instance=ExtResource( 1 )]
 
@@ -35,7 +38,6 @@ scale = Vector2( 0.328372, 0.328372 )
 [node name="RedPortal3" parent="Portals" instance=ExtResource( 4 )]
 position = Vector2( 1148.81, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = ""
 
 [node name="RedPortal4" parent="Portals" instance=ExtResource( 4 )]
 position = Vector2( 1598.96, 664 )

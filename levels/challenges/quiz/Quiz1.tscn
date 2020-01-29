@@ -20,6 +20,9 @@ font_data = ExtResource( 9 )
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ParallaxBackgroundRed" parent="." instance=ExtResource( 2 )]
 
@@ -34,34 +37,32 @@ format = 1
 tile_data = PoolIntArray( 65535, 0, 0, 30, 0, 0, 131071, 0, 0, 65566, 0, 0, 196607, 0, 0, 131102, 0, 0, 262143, 0, 0, 196638, 0, 0, 327679, 0, 0, 262174, 0, 0, 393215, 0, 0, 327710, 0, 0, 458751, 0, 0, 393246, 0, 0, 524287, 0, 0, 458782, 0, 0, 589823, 0, 0, 524318, 0, 0, 655359, 0, 0, 589854, 0, 0, 720895, 0, 0, 655390, 0, 0, 786431, 0, 0, 720926, 0, 0, 851967, 0, 0, 786434, 15, 0, 786435, 15, 1, 786436, 15, 1, 786437, 15, 2, 786441, 15, 0, 786442, 15, 1, 786443, 15, 1, 786444, 15, 2, 786448, 15, 0, 786449, 15, 1, 786450, 15, 1, 786451, 15, 2, 786455, 15, 0, 786456, 15, 1, 786457, 15, 1, 786458, 15, 2, 786462, 0, 0, 917503, 0, 0, 851998, 0, 0, 983039, 0, 0, 917534, 0, 0, 1048575, 0, 0, 983040, 3, 0, 983041, 3, 1, 983042, 3, 1, 983043, 3, 1, 983044, 3, 1, 983045, 3, 1, 983046, 3, 1, 983047, 3, 1, 983048, 3, 1, 983049, 3, 1, 983050, 3, 1, 983051, 3, 1, 983052, 3, 1, 983053, 3, 1, 983054, 3, 1, 983055, 3, 1, 983056, 3, 1, 983057, 3, 1, 983058, 3, 1, 983059, 3, 1, 983060, 3, 1, 983061, 3, 1, 983062, 3, 1, 983063, 3, 1, 983064, 3, 1, 983065, 3, 1, 983066, 3, 1, 983067, 3, 1, 983068, 3, 1, 983069, 3, 2, 983070, 0, 0, 1114111, 0, 0, 1048606, 0, 0 )
 
 [node name="Portals" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="RedPortal" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 235.349, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/YouLostQuiz.tscn"
+scene_path = "res://levels/challenges/quiz/YouLostQuiz.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal2" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 692.134, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/YouLostQuiz.tscn"
+scene_path = "res://levels/challenges/quiz/YouLostQuiz.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal3" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 1148.81, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/YouLostQuiz.tscn"
+scene_path = "res://levels/challenges/quiz/YouLostQuiz.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal4" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 1598.96, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/Quiz2.tscn"
+scene_path = "res://levels/challenges/quiz/Quiz2.tscn"
 ensure_double_jump = false
 
 [node name="Labels" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="SlogansQuiz" type="Label" parent="Labels"]
 anchor_left = 0.5
