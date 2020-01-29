@@ -15,6 +15,9 @@
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ParallaxBackgroundRed" parent="." instance=ExtResource( 2 )]
 
@@ -66,7 +69,7 @@ autowrap = true
 [node name="RedPortal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1614.49, 858.221 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/Quiz1.tscn"
+scene_path = "res://levels/challenges/quiz/Quiz1.tscn"
 ensure_double_jump = false
 
 [node name="Player" parent="." instance=ExtResource( 9 )]

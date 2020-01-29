@@ -38,7 +38,6 @@ tile_data = PoolIntArray( 1703942, 0, 3 )
 position = Vector2( 1784.71, 1108.19 )
 
 [node name="Spikes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Spikes" parent="Spikes" instance=ExtResource( 6 )]
 position = Vector2( 480.176, 2097.15 )
@@ -273,7 +272,7 @@ enable_teleport = false
 [node name="QuizPortal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1082.7, 923.592 )
 scale = Vector2( 0.3, 0.3 )
-scene_path = "res://challenges/quiz/Quiz1.tscn"
+scene_path = "res://levels/challenges/quiz/Quiz1.tscn"
 ensure_double_jump = false
 
 [node name="ParallaxBGRed" parent="." instance=ExtResource( 8 )]

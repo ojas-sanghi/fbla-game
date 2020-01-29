@@ -37,10 +37,8 @@ format = 1
 tile_data = PoolIntArray( 393291, 0, 0, 589852, 0, 0, 589867, 0, 3, 655373, 0, 0 )
 
 [node name="Spikes" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="FirstGap" type="Node2D" parent="Spikes"]
-editor/display_folded = true
 
 [node name="Spikes" parent="Spikes/FirstGap" instance=ExtResource( 5 )]
 position = Vector2( 3040.34, 817.19 )
@@ -94,7 +92,6 @@ position = Vector2( 3992.52, 817.19 )
 position = Vector2( 4056.52, 817.19 )
 
 [node name="SecondGap" type="Node2D" parent="Spikes"]
-editor/display_folded = true
 
 [node name="Spikes22" parent="Spikes/SecondGap" instance=ExtResource( 5 )]
 position = Vector2( 4896.61, 818.988 )
@@ -118,7 +115,6 @@ position = Vector2( 5216.79, 818.988 )
 position = Vector2( 5278.79, 818.988 )
 
 [node name="Flags" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="StartFlag" parent="Flags" instance=ExtResource( 6 )]
 position = Vector2( 358.108, 673.77 )
@@ -132,7 +128,6 @@ scale = Vector2( 0.35, 0.35 )
 scene_path = "res://levels/level1/SubLevel1.tscn"
 
 [node name="Instructions" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Move" type="Label" parent="Instructions"]
 anchor_right = 1.0
