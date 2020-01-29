@@ -5,9 +5,9 @@
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/tilesets/red.tres" type="TileSet" id=4]
 [ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/GUI/labels/LabelBig.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/GUI/labels/LabelMid.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/GUI/labels/LabelMidBig.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/GUI/labels/LabelBigWhite.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/GUI/labels/LabelMidWhite.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/GUI/labels/LabelMidBigWhite.tscn" type="PackedScene" id=8]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
 
 [node name="Quiz3" type="Control"]
