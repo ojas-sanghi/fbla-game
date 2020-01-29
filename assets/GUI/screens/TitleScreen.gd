@@ -4,7 +4,6 @@ func _ready() -> void:
 	$VBoxContainer/Play.grab_focus()
 
 func _on_Play_pressed() -> void:
-	print("bruh")
 	$AnimationPlayer.play("fade_in")
 	yield($AnimationPlayer, "animation_finished")
 
