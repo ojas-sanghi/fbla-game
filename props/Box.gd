@@ -1,29 +1,38 @@
 extends KinematicBody2D
 
-const GRAVITY_VEC = Vector2(0,500)
+# Gravity being applied to box
+const GRAVITY_VEC = Vector2(0, 500)
 
-var linear_vel = Vector2(0, 0)
+# Initial velocity is 0
+var _velocity: = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
-	move_and_slide(linear_vel)
+	# Move by the velocity
+	move_and_slide(_velocity)
 
-	linear_vel.y = GRAVITY_VEC.y
+	# Set vertical velocity to the gravity constant
+	_velocity.y = GRAVITY_VEC.y
 
 func _on_Area2DLeft_body_entered(body: PhysicsBody2D) -> void:
+	# Solves weird problem if there is a ghost collision
 	if not body:
 		return
+	# Set x velocity if the player is hitting the box
 	if body.name == "Player":
-		linear_vel.x = 200
+		_velocity.x = 250
 
 func _on_Area2DRight_body_entered(body: PhysicsBody2D) -> void:
 	if not body:
 		return
+	# Set x velocity if the player is hitting the box
 	if body.name == "Player":
-		linear_vel.x = -200
+		_velocity.x = -250
 
 func _on_Area2DRight_body_exited(body: PhysicsBody2D) -> void:
-	linear_vel.x = 0
+	# Stop moving if the player left
+	_velocity.x = 0
 
 func _on_Area2DLeft_body_exited(body: PhysicsBody2D) -> void:
-	linear_vel.x = 0
+	# Stop moving if the player left
+	_velocity.x = 0
 
