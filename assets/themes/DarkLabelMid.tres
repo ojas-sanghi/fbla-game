@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=2 format=2]
+
+[ext_resource path="res://assets/fonts/Font30.tres" type="DynamicFont" id=1]
+
+[resource]
+default_font = ExtResource( 1 )
+Label/colors/font_color = Color( 0.184314, 0.223529, 0.262745, 1 )
+Label/colors/font_color_shadow = Color( 0.133333, 0.52549, 0.847059, 1 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 0
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null

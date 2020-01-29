@@ -8,7 +8,7 @@
 [ext_resource path="res://sceneElements/flags/StartFlag.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sceneElements/flags/EndFlag.tscn" type="PackedScene" id=7]
 [ext_resource path="res://sceneElements/portals/BluePortal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/GUI/labels/LabelMid.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/themes/DarkLabelMid.tres" type="Theme" id=9]
 [ext_resource path="res://assets/parallaxBGs/ParallaxBGBlue.tscn" type="PackedScene" id=10]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/GUI/GUI.tscn" type="PackedScene" id=12]
@@ -134,27 +134,36 @@ scene_path = "res://levels/level1/SubLevel1.tscn"
 [node name="Instructions" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Move" parent="Instructions" instance=ExtResource( 9 )]
+[node name="Move" type="Label" parent="Instructions"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 263.855
 margin_top = 495.288
 margin_right = 573.855
 margin_bottom = 573.288
+theme = ExtResource( 9 )
 text = "Use WASD or the arrow keys to move"
 autowrap = true
 
-[node name="Jump" parent="Instructions" instance=ExtResource( 9 )]
+[node name="Jump" type="Label" parent="Instructions"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 873.936
 margin_top = 404.532
 margin_right = 1183.94
-margin_bottom = 482.532
+margin_bottom = 509.532
+theme = ExtResource( 9 )
 text = "Use Space, the Up arrow key, or W to jump!"
 autowrap = true
 
-[node name="Die" parent="Instructions" instance=ExtResource( 9 )]
-margin_left = 3073.34
-margin_top = 698.956
-margin_right = 3380.34
-margin_bottom = 771.956
+[node name="Die" type="Label" parent="Instructions"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3073.0
+margin_top = 699.0
+margin_right = 3339.0
+margin_bottom = 769.0
+theme = ExtResource( 9 )
 text = "If you hit the spikes, you'll die!"
 autowrap = true
 

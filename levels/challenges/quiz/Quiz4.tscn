@@ -1,16 +1,17 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://challenges/quiz/Quiz.gd" type="Script" id=1]
+[ext_resource path="res://levels/challenges/quiz/Quiz.gd" type="Script" id=1]
 [ext_resource path="res://assets/parallaxBGs/ParallaxBGRed.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/tilesets/red.tres" type="TileSet" id=4]
 [ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/GUI/labels/LabelBigWhite.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/GUI/labels/LabelMidWhite.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/GUI/labels/LabelMidBigWhite.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/themes/WhiteLabelBig.tres" type="Theme" id=6]
+[ext_resource path="res://assets/themes/WhiteLabelMid.tres" type="Theme" id=7]
+[ext_resource path="res://assets/themes/WhiteLabelMidBig.tres" type="Theme" id=8]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/GUI/GUI.tscn" type="PackedScene" id=10]
 
-[node name="Quiz5" type="Control"]
+[node name="Quiz4" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
@@ -33,13 +34,13 @@ editor/display_folded = true
 [node name="RedPortal" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 235.349, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/YouLostQuiz.tscn"
+scene_path = "res://challenges/quiz/Quiz5.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal2" parent="Portals" instance=ExtResource( 5 )]
 position = Vector2( 692.134, 664 )
 scale = Vector2( 0.328372, 0.328372 )
-scene_path = "res://challenges/quiz/YouWonQuiz.tscn"
+scene_path = "res://challenges/quiz/YouLostQuiz.tscn"
 ensure_double_jump = false
 
 [node name="RedPortal3" parent="Portals" instance=ExtResource( 5 )]
@@ -57,61 +58,91 @@ ensure_double_jump = false
 [node name="Labels" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="SlogansQuiz" parent="Labels" instance=ExtResource( 6 )]
+[node name="SlogansQuiz" type="Label" parent="Labels"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
 margin_left = 766.255
 margin_top = 62.5955
 margin_right = 1129.26
 margin_bottom = 119.596
+theme = ExtResource( 6 )
 text = "Slogans Quiz!"
+align = 1
 
-[node name="SubHeading" parent="Labels" instance=ExtResource( 7 )]
-margin_left = 874.0
+[node name="SubHeading" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 896.0
 margin_top = 121.0
-margin_right = 1060.0
+margin_right = 1023.0
 margin_bottom = 156.0
-text = "Final Round"
+theme = ExtResource( 7 )
+text = "Round 4"
 
-[node name="Instructions" parent="Labels" instance=ExtResource( 8 )]
+[node name="Instructions" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 232.0
 margin_top = 212.0
 margin_right = 1685.0
 margin_bottom = 258.0
+theme = ExtResource( 8 )
 text = "Go through the portal with the brand that corresponds to the slogan:"
 
-[node name="Slogan" parent="Labels" instance=ExtResource( 8 )]
-margin_left = 805.0
+[node name="Slogan" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 783.0
 margin_top = 373.0
-margin_right = 1120.0
+margin_right = 1117.0
 margin_bottom = 419.0
-text = "\"Because I can.\""
+theme = ExtResource( 8 )
+text = "\"Let's Go Places\""
 
-[node name="Option1" parent="Labels" instance=ExtResource( 7 )]
-margin_left = 159.0
+[node name="Option1" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 188.0
 margin_top = 525.0
-margin_right = 342.0
+margin_right = 284.0
 margin_bottom = 560.0
-text = "US Marines"
+theme = ExtResource( 7 )
+text = "Toyota"
 
-[node name="Option2" parent="Labels" instance=ExtResource( 7 )]
-margin_left = 614.0
+[node name="Option2" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 643.0
 margin_top = 525.0
-margin_right = 763.0
+margin_right = 722.0
 margin_bottom = 560.0
-text = "Diet Coke"
+theme = ExtResource( 7 )
+text = "BMW"
 
-[node name="Option3" parent="Labels" instance=ExtResource( 7 )]
+[node name="Option3" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 1101.0
 margin_top = 525.0
-margin_right = 1171.0
+margin_right = 1209.0
 margin_bottom = 560.0
-text = "Nike"
+theme = ExtResource( 7 )
+text = "Adidas"
 
-[node name="Option4" parent="Labels" instance=ExtResource( 7 )]
-margin_left = 1521.0
+[node name="Option4" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1534.0
 margin_top = 525.0
-margin_right = 1671.0
+margin_right = 1641.0
 margin_bottom = 560.0
-text = "Gatorade"
+theme = ExtResource( 7 )
+text = "Honda"
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 108.059, 905.977 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 10 )]
