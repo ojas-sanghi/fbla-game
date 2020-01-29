@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/included/PNG/Backgrounds/set2_background.png" type="Texture" id=1]
-[ext_resource path="res://assets/included/PNG/Backgrounds/set2_hills.png" type="Texture" id=2]
-[ext_resource path="res://assets/included/PNG/Backgrounds/set2_tiles.png" type="Texture" id=3]
+[ext_resource path="res://assets/included/Backgrounds/set2_background.png" type="Texture" id=1]
+[ext_resource path="res://assets/included/Backgrounds/set2_hills.png" type="Texture" id=2]
+[ext_resource path="res://assets/included/Backgrounds/set2_tiles.png" type="Texture" id=3]
+
 
 [node name="ParallaxBackgroundRed" type="ParallaxBackground"]
 scale = Vector2( 2, 2 )
