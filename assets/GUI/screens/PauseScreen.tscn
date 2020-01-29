@@ -1,16 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/GUI/screens/PauseScreen.gd" type="Script" id=1]
-[ext_resource path="res://assets/GUI/labels/LabelBig.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://assets/themes/BlueButtonTheme.tres" type="Theme" id=4]
-[ext_resource path="res://assets/fonts/Font35.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/GUI/labels/LabelBigWhite.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/themes/BlueButtonTheme.tres" type="Theme" id=3]
+[ext_resource path="res://assets/fonts/Font35.tres" type="DynamicFont" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-size = 50
-font_data = ExtResource( 3 )
-
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "fade_in"
 length = 0.5
 tracks/0/type = "value"
@@ -38,7 +33,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("TransitionLayer/ColorRect:color")
@@ -76,16 +71,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.686275 )
 
-[node name="LabelBig" parent="." instance=ExtResource( 2 )]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -96.0
-margin_top = 126.0
-margin_right = 96.0
-margin_bottom = -897.0
-custom_fonts/font = SubResource( 1 )
-text = "Paused"
-align = 1
+[node name="Title" parent="." instance=ExtResource( 2 )]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 0.5
@@ -102,8 +88,8 @@ custom_constants/separation = 34
 margin_right = 400.0
 margin_bottom = 175.0
 rect_min_size = Vector2( 400, 175 )
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 5 )
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Resume"
 
 [node name="QuitMenu" type="Button" parent="VBoxContainer"]
@@ -111,8 +97,8 @@ margin_top = 209.0
 margin_right = 400.0
 margin_bottom = 384.0
 rect_min_size = Vector2( 400, 175 )
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 5 )
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Quit to Menu"
 
 [node name="QuitDesktop" type="Button" parent="VBoxContainer"]
@@ -120,14 +106,14 @@ margin_top = 418.0
 margin_right = 400.0
 margin_bottom = 593.0
 rect_min_size = Vector2( 400, 175 )
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 5 )
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Quit to Desktop"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "start"
-anims/fade_in = SubResource( 2 )
-anims/start = SubResource( 3 )
+anims/fade_in = SubResource( 1 )
+anims/start = SubResource( 2 )
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
 layer = 100

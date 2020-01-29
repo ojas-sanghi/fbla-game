@@ -2,11 +2,18 @@
 
 [ext_resource path="res://assets/fonts/Font50.tres" type="DynamicFont" id=1]
 
-[node name="LabelBig" type="Label"]
-anchor_right = 1.0
+[node name="LabelBigWhite" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = 126.0
+margin_right = 96.0
+margin_bottom = -897.0
 custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 0.184314, 0.223529, 0.262745, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.133333, 0.52549, 0.847059, 1 )
 custom_constants/shadow_offset_x = 3
 custom_constants/shadow_offset_y = 2
+text = "Paused"
+align = 1
