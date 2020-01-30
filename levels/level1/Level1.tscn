@@ -146,13 +146,30 @@ __meta__ = {
 [node name="Jump" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 873.936
-margin_top = 404.532
-margin_right = 1183.94
-margin_bottom = 509.532
+margin_left = 838.414
+margin_top = 480.207
+margin_right = 1148.42
+margin_bottom = 585.207
 theme = ExtResource( 9 )
 text = "Use Space, the Up arrow key, or W to jump!"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jump2" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 956.609
+margin_top = 356.693
+margin_right = 1266.61
+margin_bottom = 461.693
+theme = ExtResource( 9 )
+text = "The longer you hold it, the further you'll go!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Die" type="Label" parent="Labels"]
 anchor_right = 1.0
