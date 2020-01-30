@@ -127,9 +127,9 @@ position = Vector2( 3796.84, 328.721 )
 scale = Vector2( 0.35, 0.35 )
 scene_path = "res://levels/level1/SubLevel1.tscn"
 
-[node name="Instructions" type="Node2D" parent="."]
+[node name="Labels" type="Node2D" parent="."]
 
-[node name="Move" type="Label" parent="Instructions"]
+[node name="Move" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 263.855
@@ -139,8 +139,11 @@ margin_bottom = 573.288
 theme = ExtResource( 9 )
 text = "Use WASD or the arrow keys to move"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Jump" type="Label" parent="Instructions"]
+[node name="Jump" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 873.936
@@ -151,7 +154,7 @@ theme = ExtResource( 9 )
 text = "Use Space, the Up arrow key, or W to jump!"
 autowrap = true
 
-[node name="Die" type="Label" parent="Instructions"]
+[node name="Die" type="Label" parent="Labels"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 3073.0
@@ -160,6 +163,20 @@ margin_right = 3390.0
 margin_bottom = 802.0
 theme = ExtResource( 9 )
 text = "If you hit the spikes, you'll die and lose any powerups!"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="Label" parent="Labels"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 435.613
+margin_top = 93.2887
+margin_right = 982.613
+margin_bottom = 241.289
+theme = ExtResource( 9 )
+text = "Welcome! In this game, you'll be able to face some challenges you may encounter while partaking in the BAA program!"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -174,3 +191,4 @@ gravity_limit = 800
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 12 )]
+visible = false
