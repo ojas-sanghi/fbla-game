@@ -34,7 +34,7 @@ __meta__ = {
 [node name="Signs" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
 format = 1
-tile_data = PoolIntArray( 393291, 0, 0, 589852, 0, 0, 589867, 0, 3, 655373, 0, 0 )
+tile_data = PoolIntArray( 393291, 0, 0, 458807, 0, 3, 589852, 0, 0, 655373, 0, 0, 655399, 0, 3 )
 
 [node name="Spikes" type="Node2D" parent="."]
 
@@ -155,12 +155,15 @@ autowrap = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 3073.0
-margin_top = 699.0
-margin_right = 3339.0
-margin_bottom = 769.0
+margin_top = 697.0
+margin_right = 3390.0
+margin_bottom = 802.0
 theme = ExtResource( 9 )
-text = "If you hit the spikes, you'll die!"
+text = "If you hit the spikes, you'll die and lose any powerups!"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ParallaxBG" parent="." instance=ExtResource( 10 )]
 

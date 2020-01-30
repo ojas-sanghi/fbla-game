@@ -5,7 +5,7 @@ export(String, "Low", "High") var spikes_type = "High"
 
 func _ready() -> void:
 	# Load the set sprite version
-	var spikes_string = "res://assets/included/PNG/Other/spikes" + spikes_type + ".png"
+	var spikes_string = "res://assets/included/Other/spikes" + spikes_type + ".png"
 	$Sprite.texture = load(spikes_string)
 
 	# Change collisionshape based on which sprite version is chosen
