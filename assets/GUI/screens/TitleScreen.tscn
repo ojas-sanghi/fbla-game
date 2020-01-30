@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/GUI/screens/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/background.png" type="Texture" id=2]
 [ext_resource path="res://assets/themes/DarkLabelReallyBig.tres" type="Theme" id=3]
 [ext_resource path="res://assets/themes/BlueButton.tres" type="Theme" id=4]
 [ext_resource path="res://assets/fonts/Font40.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/themes/DarkLabelMidBig.tres" type="Theme" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_in"
@@ -74,11 +75,23 @@ texture = ExtResource( 2 )
 [node name="Title" type="Label" parent="."]
 margin_left = 230.0
 margin_top = 227.0
-margin_right = 949.0
-margin_bottom = 434.0
+margin_right = 972.0
+margin_bottom = 435.0
 theme = ExtResource( 3 )
 text = "Portal to Portal
 "
+
+[node name="SelectionInstructions" type="Label" parent="."]
+margin_left = 230.0
+margin_top = 358.394
+margin_right = 972.0
+margin_bottom = 404.394
+theme = ExtResource( 6 )
+text = "Use arrow keys & enter to select"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_top = 0.5
