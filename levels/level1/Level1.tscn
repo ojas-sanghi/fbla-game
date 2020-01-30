@@ -191,4 +191,3 @@ gravity_limit = 800
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="CanvasLayer" instance=ExtResource( 12 )]
-visible = false
