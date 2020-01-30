@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/GUI/screens/LevelPassedScreen.gd" type="Script" id=1]
-[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/level1_endscreen.png" type="Texture" id=2]
 [ext_resource path="res://assets/themes/WhiteLabelReallyBig.tres" type="Theme" id=3]
 [ext_resource path="res://assets/themes/BlueButton.tres" type="Theme" id=4]
 [ext_resource path="res://assets/fonts/Font40.tres" type="DynamicFont" id=5]
@@ -70,7 +70,6 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
@@ -87,15 +86,20 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.275
 anchor_top = 0.5
+anchor_right = 0.275
 anchor_bottom = 0.5
-margin_left = 245.0
-margin_top = -123.942
-margin_right = 645.0
-margin_bottom = 260.058
+margin_left = 201.831
+margin_top = -81.5415
+margin_right = 601.831
+margin_bottom = 302.458
 rect_min_size = Vector2( 162.62, 0 )
 rect_scale = Vector2( 1.12, 1.12 )
 custom_constants/separation = 34
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Continue" type="Button" parent="VBoxContainer"]
 margin_right = 400.0
