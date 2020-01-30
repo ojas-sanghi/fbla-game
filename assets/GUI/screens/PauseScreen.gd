@@ -15,12 +15,15 @@ func _on_Resume_pressed() -> void:
 	togglePause()
 
 func _on_QuitMenu_pressed() -> void:
+	# Once the Quit button is pressed, fade in
 	$AnimationPlayer.play("fade_in")
 	yield($AnimationPlayer, "animation_finished")
 
+	# Unpause
 	get_tree().paused = false
 	visible = false
 
+	# Go back to the main menu
 	get_tree().change_scene("res://assets/GUI/screens/TitleScreen.tscn")
 
 func _on_QuitDesktop_pressed() -> void:
