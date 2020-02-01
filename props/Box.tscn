@@ -1,8 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://props/Box.gd" type="Script" id=1]
-[ext_resource path="res://assets/included/Other/blockBrown.png" type="Texture" id=2]
-
+[ext_resource path="res://assets/included/Other/blockGrey.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -22,7 +21,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-rotation = -8.88506e-006
+rotation = -8.88506e-06
 shape = SubResource( 1 )
 
 [node name="Area2DLeft" type="Area2D" parent="."]
