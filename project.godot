@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Portal to Portal"
 config/description="Game made for FBLA!"
-run/main_scene="res://assets/GUI/screens/TitleScreen.tscn"
+run/main_scene="res://GUI/screens/TitleScreen.tscn"
 config/icon="res://assets/portals/BluePortal_1.png"
 config/windows_native_icon="res://assets/portals/BluePortal_1.ico"
 
