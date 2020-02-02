@@ -9,8 +9,10 @@
 [ext_resource path="res://assets/themes/WhiteLabelMid.tres" type="Theme" id=7]
 [ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://props/DoubleJump.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/GUI/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sceneElements/doubleJump/DoubleJump.tscn" type="PackedScene" id=10]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=11]
+
+
 
 [node name="YouWonQuiz" type="Control"]
 margin_right = 40.0

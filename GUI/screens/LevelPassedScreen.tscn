@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/GUI/screens/TitleScreen.gd" type="Script" id=1]
-[ext_resource path="res://assets/background.png" type="Texture" id=2]
-[ext_resource path="res://assets/themes/DarkLabelReallyBig.tres" type="Theme" id=3]
-[ext_resource path="res://assets/themes/BlueButton.tres" type="Theme" id=4]
-[ext_resource path="res://assets/fonts/Font40.tres" type="DynamicFont" id=5]
-[ext_resource path="res://assets/themes/DarkLabelMidBig.tres" type="Theme" id=6]
+[ext_resource path="res://assets/fonts/Font40.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/themes/WhiteLabelReallyBig.tres" type="Theme" id=2]
+[ext_resource path="res://assets/themes/BlueButton.tres" type="Theme" id=3]
+[ext_resource path="res://GUI/screens/LevelPassedScreen.gd" type="Script" id=4]
+[ext_resource path="res://GUI/screens/level1_passed.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_in"
@@ -62,64 +61,65 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[node name="TitleScreen" type="Control"]
+[node name="LevelPassedScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 2 )
+texture = ExtResource( 5 )
 
 [node name="Title" type="Label" parent="."]
-margin_left = 230.0
-margin_top = 227.0
-margin_right = 972.0
-margin_bottom = 435.0
-theme = ExtResource( 3 )
-text = "Portal to Portal
-"
-
-[node name="SelectionInstructions" type="Label" parent="."]
-margin_left = 230.0
-margin_top = 358.394
-margin_right = 972.0
-margin_bottom = 404.394
-theme = ExtResource( 6 )
-text = "Use arrow keys & enter to select"
-autowrap = true
+margin_left = 648.426
+margin_top = 140.525
+margin_right = 1310.43
+margin_bottom = 244.525
+theme = ExtResource( 2 )
+text = "Level passed!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.275
 anchor_top = 0.5
+anchor_right = 0.275
 anchor_bottom = 0.5
-margin_left = 245.0
-margin_top = -123.942
-margin_right = 645.0
-margin_bottom = 260.058
+margin_left = 201.831
+margin_top = -81.5415
+margin_right = 601.831
+margin_bottom = 302.458
 rect_min_size = Vector2( 162.62, 0 )
 rect_scale = Vector2( 1.12, 1.12 )
 custom_constants/separation = 34
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Play" type="Button" parent="VBoxContainer"]
+[node name="Continue" type="Button" parent="VBoxContainer"]
 margin_right = 400.0
 margin_bottom = 175.0
 rect_min_size = Vector2( 400, 175 )
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 5 )
-text = "Play"
+custom_fonts/font = ExtResource( 1 )
+disabled = true
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="QuitDesktop" type="Button" parent="VBoxContainer"]
+[node name="QuitMenu" type="Button" parent="VBoxContainer"]
 margin_top = 209.0
 margin_right = 400.0
 margin_bottom = 384.0
 rect_min_size = Vector2( 400, 175 )
-theme = ExtResource( 4 )
-custom_fonts/font = ExtResource( 5 )
-text = "Quit to Desktop"
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Quit to Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "start"
@@ -134,5 +134,4 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0 )
-[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitDesktop" to="." method="_on_QuitDesktop_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitMenu" to="." method="_on_QuitMenu_pressed"]

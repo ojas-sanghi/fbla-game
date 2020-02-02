@@ -1,6 +1,8 @@
 extends Control
 
 func _ready() -> void:
+	# Maximise window
+	OS.set_window_maximized(true)
 	# Focus on the Play button on start
 	$VBoxContainer/Play.grab_focus()
 

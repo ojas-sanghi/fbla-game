@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/themes/WhiteLabelMidBig.tres" type="Theme" id=8]
 [ext_resource path="res://assets/fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/GUI/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30

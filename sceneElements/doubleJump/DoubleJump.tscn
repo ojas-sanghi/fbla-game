@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://props/DoubleJump.gd" type="Script" id=1]
+[ext_resource path="res://sceneElements/doubleJump/DoubleJump.gd" type="Script" id=1]
 [ext_resource path="res://assets/doubleJump/Frame_3_11.png" type="Texture" id=2]
 [ext_resource path="res://assets/doubleJump/Frame_1_13.png" type="Texture" id=3]
 [ext_resource path="res://assets/doubleJump/Frame_2_12.png" type="Texture" id=4]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/doubleJump/Frame_5_9.png" type="Texture" id=6]
 [ext_resource path="res://assets/doubleJump/Frame_6_8.png" type="Texture" id=7]
 [ext_resource path="res://assets/doubleJump/Frame_7.png" type="Texture" id=8]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 66, 108 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/level1_endscreen.png-384a55aa057119bb70884da19d9b50c0.stex"
+path="res://.import/title_background.png-348cfe7b2fec9ba2e0fe0352811fa582.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/level1_endscreen.png"
-dest_files=[ "res://.import/level1_endscreen.png-384a55aa057119bb70884da19d9b50c0.stex" ]
+source_file="res://GUI/screens/title_background.png"
+dest_files=[ "res://.import/title_background.png-348cfe7b2fec9ba2e0fe0352811fa582.stex" ]
 
 [params]
 
