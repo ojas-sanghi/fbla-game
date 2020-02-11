@@ -9,4 +9,4 @@ func _on_QuitMenu_pressed() -> void:
 	$AnimationPlayer.play("fade_in")
 	yield($AnimationPlayer, "animation_finished")
 
-	get_tree().change_scene("res://assets/GUI/screens/TitleScreen.tscn")
+	get_tree().change_scene("res://GUI/screens/TitleScreen.tscn")
