@@ -2,10 +2,11 @@
 
 [ext_resource path="res://GUI/screens/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://GUI/screens/title_background.png" type="Texture" id=2]
-[ext_resource path="res://assets/themes/DarkLabelReallyBig.tres" type="Theme" id=3]
-[ext_resource path="res://assets/themes/BlueButton.tres" type="Theme" id=4]
+[ext_resource path="res://GUI/themes/DarkLabelReallyBig.tres" type="Theme" id=3]
+[ext_resource path="res://GUI/themes/BlueButton.tres" type="Theme" id=4]
 [ext_resource path="res://assets/fonts/Font40.tres" type="DynamicFont" id=5]
-[ext_resource path="res://assets/themes/DarkLabelMidBig.tres" type="Theme" id=6]
+[ext_resource path="res://GUI/themes/DarkLabelMidBig.tres" type="Theme" id=6]
+
 
 
 

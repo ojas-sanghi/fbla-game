@@ -11,8 +11,6 @@
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=10]
 
-
-
 [node name="SubLevel1" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -277,7 +275,7 @@ scale = Vector2( 0.3, 0.3 )
 scene_path = "res://levels/challenges/quiz/Quiz1.tscn"
 ensure_double_jump = false
 
-[node name="ParallaxBGRed" parent="." instance=ExtResource( 8 )]
+[node name="ParallaxBackgroundRed" parent="." instance=ExtResource( 8 )]
 
 [node name="Player" parent="." instance=ExtResource( 9 )]
 position = Vector2( 202, 1953 )
