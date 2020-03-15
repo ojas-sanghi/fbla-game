@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Frame_2_12.png-36a08f000db74823edfb9b90f5fc447c.stex"
+path="res://.import/phase.png-3e19d550409f285a375a6c04f6519729.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/doubleJump/Frame_2_12.png"
-dest_files=[ "res://.import/Frame_2_12.png-36a08f000db74823edfb9b90f5fc447c.stex" ]
+source_file="res://assets/powerups/phaseWall/phase.png"
+dest_files=[ "res://.import/phase.png-3e19d550409f285a375a6c04f6519729.stex" ]
 
 [params]
 

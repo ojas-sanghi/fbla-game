@@ -5,11 +5,12 @@
 [ext_resource path="res://assets/tilesets/bg.tres" type="TileSet" id=3]
 [ext_resource path="res://assets/tilesets/red.tres" type="TileSet" id=4]
 [ext_resource path="res://sceneElements/portals/RedPortal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/themes/WhiteLabelBig.tres" type="Theme" id=6]
-[ext_resource path="res://assets/themes/WhiteLabelMid.tres" type="Theme" id=7]
-[ext_resource path="res://assets/themes/WhiteLabelMidBig.tres" type="Theme" id=8]
+[ext_resource path="res://GUI/themes/WhiteLabelBig.tres" type="Theme" id=6]
+[ext_resource path="res://GUI/themes/WhiteLabelMid.tres" type="Theme" id=7]
+[ext_resource path="res://GUI/themes/WhiteLabelMidBig.tres" type="Theme" id=8]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=10]
+
 
 
 [node name="Quiz4" type="Control"]
