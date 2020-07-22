@@ -5,7 +5,11 @@ var _times_jumped := 0
 # var to keep track of current animation to be played
 var _anim := ""
 
-func _physics_process(delta: float) -> void:
+
+func _ready() -> void:
+	Globals.add_powerup("double_jump")
+
+func _physics_process(_delta: float) -> void:
 	# If we let go of the jump button mid-jump
 	var is_jump_interrupted := Input.is_action_just_released("jump") and _velocity.y < 0.0
 

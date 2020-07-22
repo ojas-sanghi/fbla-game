@@ -29,3 +29,5 @@ func _on_PhaseWallArea_body_entered(body: PhysicsBody2D) -> void:
 		if body.name == "Player":
 			if Globals.has_powerup("phase_wall"):
 				$StaticBody2D/CollisionShape2D.set_deferred("disabled", true)
+			else:
+				$StaticBody2D/CollisionShape2D.set_deferred("disabled", false)

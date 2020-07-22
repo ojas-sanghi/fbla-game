@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/set3_tiles.png-b3d73d1e9c39f9eeafaee39e8562a10b.stex"
+path="res://.import/rsz_green_inverted_corner_piece.png-b08b8febede27a1154b129ba0b911e9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/included/Backgrounds/set3_tiles.png"
-dest_files=[ "res://.import/set3_tiles.png-b3d73d1e9c39f9eeafaee39e8562a10b.stex" ]
+source_file="res://assets/additional/rsz_green_inverted_corner_piece.png"
+dest_files=[ "res://.import/rsz_green_inverted_corner_piece.png-b08b8febede27a1154b129ba0b911e9e.stex" ]
 
 [params]
 
@@ -19,9 +19,9 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

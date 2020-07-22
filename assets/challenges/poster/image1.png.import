@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/set3_tiles.png-b3d73d1e9c39f9eeafaee39e8562a10b.stex"
+path="res://.import/image1.png-7f8f3598c3506912cc3c707646ce6ecb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/included/Backgrounds/set3_tiles.png"
-dest_files=[ "res://.import/set3_tiles.png-b3d73d1e9c39f9eeafaee39e8562a10b.stex" ]
+source_file="res://assets/challenges/poster/image1.png"
+dest_files=[ "res://.import/image1.png-7f8f3598c3506912cc3c707646ce6ecb.stex" ]
 
 [params]
 
@@ -19,9 +19,9 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

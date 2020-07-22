@@ -7,10 +7,6 @@
 [ext_resource path="res://assets/fonts/Font40.tres" type="DynamicFont" id=5]
 [ext_resource path="res://GUI/themes/DarkLabelMidBig.tres" type="Theme" id=6]
 
-
-
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "fade_in"
 length = 0.5
@@ -134,9 +130,11 @@ anims/start = SubResource( 2 )
 layer = 100
 
 [node name="ColorRect" type="ColorRect" parent="TransitionLayer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitDesktop" to="." method="_on_QuitDesktop_pressed"]

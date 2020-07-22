@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GUI/themes/DarkLabelMid.tres" type="Theme" id=1]
+[ext_resource path="res://levels/challenges/poster/Poster.gd" type="Script" id=4]
+[ext_resource path="res://GUI/themes/BlueButton.tres" type="Theme" id=5]
+
+[node name="Poster" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 610.0
+margin_right = 1307.0
+margin_bottom = 1078.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftRect" type="Button" parent="ColorRect"]
+margin_left = -331.794
+margin_top = 590.867
+margin_right = -129.794
+margin_bottom = 650.867
+theme = ExtResource( 5 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightRect" type="Button" parent="ColorRect"]
+margin_left = 802.257
+margin_top = 590.867
+margin_right = 1004.26
+margin_bottom = 650.867
+theme = ExtResource( 5 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 943.569, 141.809 )
+
+[node name="LeftLogo" type="Button" parent="Logo"]
+margin_left = -548.569
+margin_top = -19.8094
+margin_right = -346.569
+margin_bottom = 40.1906
+theme = ExtResource( 5 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightLogo" type="Button" parent="Logo"]
+margin_left = 381.431
+margin_top = -19.8094
+margin_right = 583.431
+margin_bottom = 40.1906
+theme = ExtResource( 5 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="."]
+position = Vector2( 963.245, 598.76 )
+
+[node name="LeftImage" type="Button" parent="Image"]
+margin_left = -567.908
+margin_top = -178.036
+margin_right = -365.908
+margin_bottom = -118.036
+theme = ExtResource( 5 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightImage" type="Button" parent="Image"]
+margin_left = 365.608
+margin_top = -162.213
+margin_right = 567.608
+margin_bottom = -102.213
+theme = ExtResource( 5 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Sprite" parent="."]
+position = Vector2( 940.39, 922.454 )
+
+[node name="LeftText" type="Button" parent="Text"]
+margin_left = -548.569
+margin_top = -19.8094
+margin_right = -346.569
+margin_bottom = 40.1906
+theme = ExtResource( 5 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightText" type="Button" parent="Text"]
+margin_left = 381.431
+margin_top = -19.8094
+margin_right = 583.431
+margin_bottom = 40.1906
+theme = ExtResource( 5 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Text"]
+margin_left = -296.0
+margin_top = -20.1833
+margin_right = 346.0
+margin_bottom = 140.817
+theme = ExtResource( 1 )
+text = "asdasd"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/LeftRect" to="." method="_on_LeftRect_pressed"]
+[connection signal="pressed" from="ColorRect/RightRect" to="." method="_on_RightRect_pressed"]
+[connection signal="pressed" from="Logo/LeftLogo" to="." method="_on_LeftLogo_pressed"]
+[connection signal="pressed" from="Logo/RightLogo" to="." method="_on_RightLogo_pressed"]
+[connection signal="pressed" from="Image/LeftImage" to="." method="_on_LeftImage_pressed"]
+[connection signal="pressed" from="Image/RightImage" to="." method="_on_RightImage_pressed"]
+[connection signal="pressed" from="Text/LeftText" to="." method="_on_LeftText_pressed"]
+[connection signal="pressed" from="Text/RightText" to="." method="_on_RightText_pressed"]

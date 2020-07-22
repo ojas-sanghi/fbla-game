@@ -30,6 +30,10 @@ config/windows_native_icon="res://assets/portals/BluePortal_1.ico"
 
 Globals="*res://Globals.gd"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=1920
